@@ -34,7 +34,8 @@ namespace Shadowsocks.Controller
             {
                 CloseLogFile();
 
-                string curpath = Path.Combine(System.Windows.Forms.Application.StartupPath, @"temp");// Path.GetFullPath(".");//Path.GetTempPath();
+                //string curpath = Path.Combine(System.Windows.Forms.Application.StartupPath, @"temp");// Path.GetFullPath(".");//Path.GetTempPath();
+                string curpath = Path.Combine(Environment.GetFolderPath( Environment.SpecialFolder.LocalApplicationData), @"ssr_log");// Path.GetFullPath(".");//Path.GetTempPath();
                 LogFilePath = curpath;
                 if (!Directory.Exists(curpath))
                 {
