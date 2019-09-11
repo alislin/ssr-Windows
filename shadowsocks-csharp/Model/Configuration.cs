@@ -679,8 +679,8 @@ namespace Shadowsocks.Model
     public class ServerTransferTotal
     {
         //private static AppdataPath appData = AppdataPath.Current;
-        private static string LOG_FILE = "transfer_log.json";
-        //private static string LOG_FILE = AppdataPath.Current.GetFilePath( "transfer_log.json");
+        //private static string LOG_FILE = "transfer_log.json";
+        private static string LOG_FILE = AppdataPath.Current.GetFilePath("transfer_log.json");
 
         public Dictionary<string, object> servers = new Dictionary<string, object>();
         private int saveCounter;

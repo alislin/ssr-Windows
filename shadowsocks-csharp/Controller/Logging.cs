@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Net.Sockets;
 using System.Text;
+using Shadowsocks.Model;
 using Shadowsocks.Obfs;
 
 namespace Shadowsocks.Controller
@@ -34,16 +35,9 @@ namespace Shadowsocks.Controller
             {
                 CloseLogFile();
 
-                //string curpath = Path.Combine(System.Windows.Forms.Application.StartupPath, @"temp");// Path.GetFullPath(".");//Path.GetTempPath();
-                string curpath = Path.Combine(Environment.GetFolderPath( Environment.SpecialFolder.LocalApplicationData), @"ssr_log");// Path.GetFullPath(".");//Path.GetTempPath();
-                LogFilePath = curpath;
-                if (!Directory.Exists(curpath))
-                {
-                    Directory.CreateDirectory(curpath);
-                }
                 string new_date = DateTime.Now.ToString("yyyy-MM");
                 LogFileName = "shadowsocks_" + new_date + ".log";
-                LogFile = Path.Combine(curpath, LogFileName);
+                LogFile = AppdataPath.Current.GetFilePath(LogFileName);
                 _logFileStream = new FileStream(LogFile, FileMode.Append);
                 _logStreamWriter = new StreamWriterWithTimestamp(_logFileStream);
                 _logStreamWriter.AutoFlush = true;

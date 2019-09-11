@@ -3,7 +3,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
 
 namespace Shadowsocks.Model
@@ -16,7 +15,7 @@ namespace Shadowsocks.Model
         public string DataPath => GetDataPath();
         private string GetDataPath()
         {
-            string curpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), @"ssr_log");// Path.GetFullPath(".");//Path.GetTempPath();
+            string curpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), @"ssr_Data");// Path.GetFullPath(".");//Path.GetTempPath();
             if (!Directory.Exists(curpath))
             {
                 Directory.CreateDirectory(curpath);
