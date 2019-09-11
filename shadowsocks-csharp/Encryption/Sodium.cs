@@ -1,4 +1,5 @@
 ﻿using Shadowsocks.Controller;
+using Shadowsocks.Model;
 using Shadowsocks.Properties;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace Shadowsocks.Encryption
 
         static Sodium()
         {
-            string dllPath = Path.Combine(Path.Combine(System.Windows.Forms.Application.StartupPath, @"temp"), "libsscrypto.dll");
+            string dllPath = Path.Combine(AppdataPath.Current.GetFilePath(@"temp"), "libsscrypto.dll");
             try
             {
                 if (IntPtr.Size == 4)

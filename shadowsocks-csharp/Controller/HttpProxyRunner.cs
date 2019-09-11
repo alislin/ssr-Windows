@@ -18,7 +18,7 @@ namespace Shadowsocks.Controller
         private Process _process;
         private static string runningPath;
         private int _runningPort;
-        private static string _subPath = @"temp";
+        private static string _subPath = AppdataPath.Current.GetFilePath(@"temp");
         private static string _exeNameNoExt = @"/ssr_privoxy";
         private static string _exeName = @"/ssr_privoxy.exe";
 

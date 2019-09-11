@@ -96,6 +96,7 @@ SelectedFirst=选中优先
 Timer=定时切换
 Balance in group=所选组切换
 AutoBan=自动禁用出错服务器
+Use AppData for tmp=使用用户AppData目录
 
 Remote proxy=二级（前置）代理
 Proxy On=开启代理

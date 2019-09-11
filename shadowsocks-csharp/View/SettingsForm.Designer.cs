@@ -74,6 +74,7 @@
             this.DNSText = new System.Windows.Forms.TextBox();
             this.buttonDefault = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.checkBoxUseAppdata = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.Socks5ProxyGroup.SuspendLayout();
@@ -116,6 +117,7 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.checkBoxUseAppdata, 1, 5);
             this.tableLayoutPanel2.Controls.Add(this.LabelRandom, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.RandomComboBox, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.CheckAutoBan, 1, 4);
@@ -124,13 +126,14 @@
             this.tableLayoutPanel2.Controls.Add(this.checkBalanceInGroup, 1, 3);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(372, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 5;
+            this.tableLayoutPanel2.RowCount = 6;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(206, 118);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(206, 138);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // LabelRandom
@@ -672,6 +675,16 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "DNS";
             // 
+            // checkBoxUseAppdata
+            // 
+            this.checkBoxUseAppdata.AutoSize = true;
+            this.checkBoxUseAppdata.Location = new System.Drawing.Point(56, 121);
+            this.checkBoxUseAppdata.Name = "checkBoxUseAppdata";
+            this.checkBoxUseAppdata.Size = new System.Drawing.Size(138, 14);
+            this.checkBoxUseAppdata.TabIndex = 16;
+            this.checkBoxUseAppdata.Text = "Use AppData for tmp";
+            this.checkBoxUseAppdata.UseVisualStyleBackColor = true;
+            // 
             // SettingsForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -762,5 +775,6 @@
         private System.Windows.Forms.NumericUpDown NumTimeout;
         private System.Windows.Forms.Button buttonDefault;
         private System.Windows.Forms.CheckBox checkBalanceInGroup;
+        private System.Windows.Forms.CheckBox checkBoxUseAppdata;
     }
 }

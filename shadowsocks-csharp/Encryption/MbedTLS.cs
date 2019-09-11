@@ -3,6 +3,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 
 using Shadowsocks.Controller;
+using Shadowsocks.Model;
 using Shadowsocks.Properties;
 using Shadowsocks.Util;
 
@@ -65,7 +66,7 @@ namespace Shadowsocks.Encryption
 
         static MbedTLS()
         {
-            string runningPath = Path.Combine(System.Windows.Forms.Application.StartupPath, @"temp"); // Path.GetTempPath();
+            string runningPath = AppdataPath.Current.GetFilePath(@"temp"); // Path.GetTempPath();
             if (!Directory.Exists(runningPath))
             {
                 Directory.CreateDirectory(runningPath);

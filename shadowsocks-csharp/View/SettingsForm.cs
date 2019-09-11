@@ -79,6 +79,7 @@ namespace Shadowsocks.View
             checkAutoStartup.Text = I18N.GetString(checkAutoStartup.Text);
             checkRandom.Text = I18N.GetString(checkRandom.Text);
             CheckAutoBan.Text = I18N.GetString("AutoBan");
+            checkBoxUseAppdata.Text = I18N.GetString("Use AppData for tmp");
 
             Socks5ProxyGroup.Text = I18N.GetString(Socks5ProxyGroup.Text);
             checkBoxPacProxy.Text = I18N.GetString(checkBoxPacProxy.Text);
@@ -151,6 +152,7 @@ namespace Shadowsocks.View
                 _modifiedConfiguration.authPass = TextAuthPass.Text;
 
                 _modifiedConfiguration.autoBan = CheckAutoBan.Checked;
+                _modifiedConfiguration.UseAppDataPath = checkBoxUseAppdata.Checked;
 
                 return ret;
             }
@@ -194,6 +196,7 @@ namespace Shadowsocks.View
             TextAuthPass.Text = _modifiedConfiguration.authPass;
 
             CheckAutoBan.Checked = _modifiedConfiguration.autoBan;
+            checkBoxUseAppdata.Checked = _modifiedConfiguration.UseAppDataPath;
         }
 
         private void LoadCurrentConfiguration()

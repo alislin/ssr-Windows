@@ -4,6 +4,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 using Shadowsocks.Controller;
+using Shadowsocks.Model;
 using Shadowsocks.Properties;
 
 namespace Shadowsocks.Encryption
@@ -27,7 +28,7 @@ namespace Shadowsocks.Encryption
                 //{
                 //    //Console.WriteLine(e.ToString());
                 //}
-                string runningPath = Path.Combine(System.Windows.Forms.Application.StartupPath, @"temp"); // Path.GetTempPath();
+                string runningPath = AppdataPath.Current.GetFilePath(@"temp"); // Path.GetTempPath();
                 if (!Directory.Exists(runningPath))
                 {
                     Directory.CreateDirectory(runningPath);
